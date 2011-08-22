@@ -13,6 +13,7 @@
 	<!-- start cartesian interface -->
 	<node pkg="cob_manipulator" type="move_cart.py" name="move_cart" ns="arm_controller" cwd="node" respawn="false" output="screen"/>
 	<node pkg="cob_manipulator" type="cob_ik_solver_kdl" name="cob_ik_solver_kdl" ns="arm_controller" cwd="node" respawn="false" output="screen"/>
+	<include file="$(find cob_manipulator)/ros/launch/cob3_arm_kinematics.launch"/>
 
 	<!-- rostest integration -->
 	<include file="$(find cob_arm)/ros/launch/arm.test" />
